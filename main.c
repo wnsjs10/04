@@ -1,19 +1,17 @@
 #include <stdio.h>
 
 int main () {
-    int x, y;
+    int x, y, z;
 
-    printf("input two integers: ");
-    scanf("%i %i", &x, &y);
+    printf("input the second :");
+    scanf("%i", &x);    
 
-    printf(" + result is %i\n", x + y);
-    printf(" - result is %i\n", x - y);
-    printf(" * result is %i\n", x * y);
-    printf(" / result is %i\n", x / y);
-    printf(" %% result is %i\n", x % y);
+    y= x/60;
+    z= x%60;
+    printf("the time is %i : %i\n", y, z  );
 
     return 0;
-    
+
 
 
 }
