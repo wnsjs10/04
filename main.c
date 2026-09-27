@@ -1,15 +1,22 @@
 #include <stdio.h>
 
-int main () {
-    int x, y;
+int main (int argc, char *argv[]) {
+    unsigned int x;
+    int b;
 
-    printf("input the year :");
-    scanf("%i", &x);    
-    y = x % 4 == 0 && x % 100 != 0 || x % 400 == 0;
-   
-    printf(" is the tear %i the leap year? : %i\n", x, y); 
+    printf(" input a number : ");
+    scanf("%ui", &x);
+
+    for (b =0; x != 0; x >>= 1) {
+        if (x & 1) {
+            b++;
+        }
+    }
+
+    printf("The result is ; %i\n", b);
+
     return 0;
-
+    
 
 
 }
